@@ -1,4 +1,5 @@
-import {isArray, isNullOrUndef} from 'chart.js/helpers';
+import ChartJsV3 from "chart.js";
+const { isArray, isNullOrUndef } = ChartJsV3.helpers;
 
 /**
  * @param {string | Array<string>} raw
@@ -10,12 +11,12 @@ export function toTextLines(raw) {
 
   while (inputs.length) {
     const input = inputs.pop();
-    if (typeof input === 'string') {
-      lines.unshift.apply(lines, input.split('\n'));
+    if (typeof input === "string") {
+      lines.unshift.apply(lines, input.split("\n"));
     } else if (Array.isArray(input)) {
       inputs.push.apply(inputs, input);
     } else if (!isNullOrUndef(inputs)) {
-      lines.unshift('' + input);
+      lines.unshift("" + input);
     }
   }
 
@@ -23,12 +24,12 @@ export function toTextLines(raw) {
 }
 
 /**
-* @param {any} size
-* @return {'min' | 'max'}
-*/
+ * @param {any} size
+ * @return {'min' | 'max'}
+ */
 export function validateSizeValue(size) {
-  if (!size || ['min', 'max'].indexOf(size) === -1) {
-    return 'max';
+  if (!size || ["min", "max"].indexOf(size) === -1) {
+    return "max";
   }
   return size;
 }
