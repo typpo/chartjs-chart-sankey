@@ -5,14 +5,13 @@
  * Released under the MIT license
  */
 (function (global, factory) {
-typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('chart.js-v3'), require('chart.js')) :
-typeof define === 'function' && define.amd ? define(['chart.js-v3', 'chart.js'], factory) :
-(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ChartJsV3$1, global.Chart));
-})(this, (function (ChartJsV3$1, ChartJsV3) { 'use strict';
+typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('chart.js-v3')) :
+typeof define === 'function' && define.amd ? define(['chart.js-v3'], factory) :
+(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ChartJsV3));
+})(this, (function (ChartJsV3) { 'use strict';
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var ChartJsV3__default$1 = /*#__PURE__*/_interopDefaultLegacy(ChartJsV3$1);
 var ChartJsV3__default = /*#__PURE__*/_interopDefaultLegacy(ChartJsV3);
 
 const { isArray, isNullOrUndef: isNullOrUndef$1 } = ChartJsV3__default["default"].helpers;
@@ -360,8 +359,8 @@ function layout(nodes, data, priority, size) {
   return {maxX, maxY: maxYWithPadding};
 }
 
-const { DatasetController } = ChartJsV3__default$1["default"];
-const { valueOrDefault, toFont, isNullOrUndef } = ChartJsV3__default$1["default"].helpers;
+const { DatasetController } = ChartJsV3__default["default"];
+const { valueOrDefault, toFont, isNullOrUndef } = ChartJsV3__default["default"].helpers;
 
 /**
  * @param {Array<SankeyDataPoint>} data Array of raw data elements
@@ -785,8 +784,8 @@ SankeyController.overrides = {
   },
 };
 
-const { Element } = ChartJsV3__default$1["default"];
-const { color, getHoverColor } = ChartJsV3__default$1["default"].helpers;
+const { Element } = ChartJsV3__default["default"];
+const { color, getHoverColor } = ChartJsV3__default["default"].helpers;
 
 /**
  * @typedef {{x: number, y: number}} ControlPoint
@@ -997,6 +996,6 @@ Flow.defaults = {
   hoverColorTo: (ctx, options) => getHoverColor(options.colorTo),
 };
 
-ChartJsV3$1.Chart.register(SankeyController, Flow);
+ChartJsV3.Chart.register(SankeyController, Flow);
 
 }));

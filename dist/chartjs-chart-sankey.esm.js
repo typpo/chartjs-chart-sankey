@@ -4,8 +4,7 @@
  * (c) 2022 Jukka Kurkela
  * Released under the MIT license
  */
-import ChartJsV3$1 from 'chart.js-v3';
-import ChartJsV3 from 'chart.js';
+import ChartJsV3 from 'chart.js-v3';
 
 const { isArray, isNullOrUndef: isNullOrUndef$1 } = ChartJsV3.helpers;
 
@@ -352,8 +351,8 @@ function layout(nodes, data, priority, size) {
   return {maxX, maxY: maxYWithPadding};
 }
 
-const { DatasetController } = ChartJsV3$1;
-const { valueOrDefault, toFont, isNullOrUndef } = ChartJsV3$1.helpers;
+const { DatasetController } = ChartJsV3;
+const { valueOrDefault, toFont, isNullOrUndef } = ChartJsV3.helpers;
 
 /**
  * @param {Array<SankeyDataPoint>} data Array of raw data elements
@@ -777,8 +776,8 @@ SankeyController.overrides = {
   },
 };
 
-const { Element } = ChartJsV3$1;
-const { color, getHoverColor } = ChartJsV3$1.helpers;
+const { Element } = ChartJsV3;
+const { color, getHoverColor } = ChartJsV3.helpers;
 
 /**
  * @typedef {{x: number, y: number}} ControlPoint

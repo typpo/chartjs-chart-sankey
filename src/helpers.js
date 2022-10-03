@@ -1,4 +1,4 @@
-import ChartJsV3 from "chart.js";
+import ChartJsV3 from "chart.js-v3";
 const { isArray, isNullOrUndef } = ChartJsV3.helpers;
 
 /**
